@@ -1,7 +1,8 @@
 inc:
   # Blog Information
   title:        "Octono Limited"
-  subtitle:     "Dynamics & .NET Development and Consultancy"
+  #Dynamics & .NET Development and Consultancy
+  subtitle:     "Dynamics | .NET | Open Source | Linux"
   cover_image:  blog-cover.jpg
   logo:         logo.png
   

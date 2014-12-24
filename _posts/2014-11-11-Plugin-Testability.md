@@ -7,7 +7,7 @@ cover_image: blog-cover.jpg
 
 excerpt: "Keeping control of your plugin execution context"
 
-draft: false
+draft: true
 
 author:
   name: Darren Lewis

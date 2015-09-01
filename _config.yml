@@ -15,8 +15,8 @@ inc:
   about_link:   http://daxaar.github.io/about/
   
   # Product Information
-  product_link: http://daxaar.github.io/
-  tagline:      "Professional services aligned to your needs"
+  #product_link: http://daxaar.github.io/
+  #tagline:      "Professional services aligned to your needs"
   
   # Comments
   disqus:

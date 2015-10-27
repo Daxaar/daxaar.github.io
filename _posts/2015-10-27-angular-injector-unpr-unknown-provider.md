@@ -47,7 +47,7 @@ It's this common mistake that all my google searches suggested was the cause of 
 
 Here's my app.js containing my applications *single* controller and the *only* place where the module 'MyApp' was defined.  Believe me, I checked this several times before concluding the duplicate module definition wasn't my problem.
 
-``` js
+~~~ js
 angular.module('MyApp',[])
   .controller('MainController',MainController);
 
@@ -56,19 +56,18 @@ MainController.$inject = ['SomeService'];
 function MainController(someService){
   //...
 };
-```
+~~~
 
 And here's my myservice.js containing the *one* service in my app that I wish to inject.
 
-``` js
+~~~ js
 angular.module('another.module')
   .service('SomeService',SomeService);
 
 function SomeService(){
   //...
 };
-```
-
+~~~
 
 Strangely unit tests for verifying the injected service were passing.  It turns out, somewhat obviously after the fact (isn't that always the case) that I have to inject the service module into the 'MyApp' module as a dependency.  So many answers online talk about removing the dependency brackets from the module definition I couldn't see the woods for trees.
 

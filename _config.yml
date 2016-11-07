@@ -1,0 +1,55 @@
+# Site wide configuration
+
+title:            onemorecommit.com
+locale:           en_GB
+url:              //onemorecommit.com
+
+
+# Jekyll configuration
+
+permalink:   /:year/:month/:day/:title/
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+front_page:
+  posts_limit: 20
+
+# Site owner
+owner:
+  name: Darren Lewis
+  avatar: me.jpg
+  bio: "Professional Nerd"
+  email:
+  disqus-shortname: Daxaar
+  twitter: Daxaar
+  google:
+    plus: #lewisd35
+    analytics: UA-18060688-3
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: daxaar
+  stackoverflow: 355389/darren-lewis
+  linkedin: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]

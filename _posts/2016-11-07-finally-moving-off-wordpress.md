@@ -11,6 +11,7 @@ tags:
   - JavaScript
   - Angular 2
   - TypeScript
+comments: true
 ---
 
 Placeholder until I get all the posts exported from Wordpress.

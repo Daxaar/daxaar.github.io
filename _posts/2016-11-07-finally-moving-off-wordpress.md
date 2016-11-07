@@ -1,5 +1,6 @@
 ---
 title: Finally moving off Wordpress
+excerpt: "Posts incoming!"
 author: daxaar
 layout: post
 categories:
@@ -14,4 +15,4 @@ tags:
 comments: false
 ---
 
-Placeholder until I get all the posts exported from Wordpress.
+For now they're still over [here](http://frozenorange.wordpress.com).

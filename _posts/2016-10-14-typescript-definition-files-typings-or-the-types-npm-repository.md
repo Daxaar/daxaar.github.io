@@ -4,7 +4,7 @@ title: Obtaining Typescript Definition Files
 excerpt:
 author: daxaar
 categories:
-  - NPM
+  - npm
   - Typescript
 
 tags:

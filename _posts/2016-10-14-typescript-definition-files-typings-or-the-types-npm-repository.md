@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Obtaining Typescript Definition Files
-excerpt: 
+excerpt:
 author: daxaar
 categories:
   - NPM
@@ -10,8 +10,9 @@ categories:
 tags:
 
 draft: false
+comments: true
 ---
-<h3>typings or the types npm organisation?</h3>
+### typings or the types npm organisation?
 
 In this post I'll look at the current options available to us for managing the definition files (d.ts) in our typescript projects.
 
@@ -21,7 +22,7 @@ As a quick update <code>tsd</code> was a command line tool that allowed you to p
 
 I discovered we now have two options available to us that initially caused me some confusion as I wasn't sure if they were related in some way.  They're not.
 
-<h3>typings</h3>
+### typings
 
 The typings project is a community supported option hosted on github that has been the primary replacement for tsd.  It allows you to pull in definition files from a number of sources and continues to be supported.  It has a solid upgrade path if you're moving a project from <code>tsd</code>.
 
@@ -31,7 +32,9 @@ View the <a href="https://github.com/typings/typings">README</a> on the project 
 
 The @types organisation on npm has been created by Microsoft as a response to the communities feedback that obtaining definition files has been troublesome.  At the time of writing the organisation contains 2247 separate packages.  Since this is a regular npm repository you'll just install the definition files as regular npm packages using the @prefix for the org:
 
-<code>npm install @types\lodash</code>.
+~~~
+npm install @types\lodash
+~~~
 
 The repository is populated from a <a href="https://github.com/Microsoft/types-publisher">publisher service</a> that continues to pull the definitions from the <a href="https://github.com/DefinitelyTyped/DefinitelyTyped">DefinitelyTyped</a> repo.  You could use it for pulling into a private repo if required.
 

@@ -11,7 +11,7 @@ tags:
 draft: false
 comments: true
 ---
-(https://angular.io/docs/ts/latest/guide/ngmodule.html)[NgModule] was a late addition to Angular 2 first appearing in RC5.  One of it's main purposes is to support lazy loading but it also helps reduce the code required for exporting and importing of components, directives and pipes.  This post isn't an intro to modules, there are plenty of those out there including the great docs on the angular site linked above.
+[NgModule](https://angular.io/docs/ts/latest/guide/ngmodule.html) was a late addition to Angular 2 first appearing in RC5.  One of it's main purposes is to support lazy loading but it also helps reduce the code required for exporting and importing of components, directives and pipes.  This post isn't an intro to modules, there are plenty of those out there including the great docs on the angular site linked above.
 
 What I want to look at in this post is how we can use a small quality of life feature to simplify the importing of modules into other modules using an index.ts to export all items from a module.
 

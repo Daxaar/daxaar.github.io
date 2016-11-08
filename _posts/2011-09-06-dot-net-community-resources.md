@@ -1,0 +1,13 @@
+---
+layout: post
+title: My Community Resources
+excerpt: 
+author: daxaar
+categories:
+  - General
+
+tags:
+
+draft: false
+---
+In conversation with my peers I often find myself citing references to information picked up from my common list of community sources (blogs, websites, podcasts, video training etc).&nbsp; All too often I'm asked "What's dot net rocks?" or "Who's Phil Haack?".&nbsp; Well here's my starter for ten of essential community reading, listening and watching.<br /><br />Podcasts<br /><a target="_blank" href="http://www.dotnetrocks.com/">.NET Rocks</a> - The <b>original</b> (seriously) audio talk show for .NET developers.<br /><a target="_blank" href="http://www.hanselminutes.com/">Hanselminutes</a> - Scott Hanselman as below.&nbsp; Produced by Carl Franklin who also hosts .NET Rocks.<br /><a target="_blank" href="http://www.thisdevelperslife.com">This Developers Life</a> - A simply excellent perspective on the experiences and stories of real developers. <br /><br />Blog Roll<br /><a target="_blank" href="http://www.hanselman.com">Scott Hanselman</a> - Microsoft Community Manager (I think) who's a great speaker and has a.<br /><a target="_blank" href="http://www.haacked.com">Phil Haack</a> - Program Manager on the ASP.NET MVC team.<br /><a target="_blank" href="http://ayende.com/blog/">Ayende Rahien</a> - <b>The</b> man when it comes to OSS frameworks on the .NET stack (NHibernate, EFProfiler, RavenDB)<br /><a target="_blank" href="http://blogs.msdn.com/b/willy-peter_schaub/">Willy-Peter Schaub</a> - Team Foundation Server Ranger<br /><br />Community Websites<br /><a target="_blank" href="http://www.stackoverflow.com">www.stackoverflow.com </a>- Technical Q and A forum done properly.<br /><br />Online Video Training<br /><a target="_blank" href="http://www.tekpub.com">TekPub</a> (Paid)- Slightly different style of video training.&nbsp; Their pair programmed jQuery series is simple superb.<br /><a target="_blank" href="http://www.pluralsight.com">Pluralsight</a> (Paid)- Been with these for a number of years now.&nbsp; Awesome and now very extensive Microsoft training library.<br /><a target="_blank" href="http://channel9.msdn.com">Channel 9</a> - Video training side of MSDN.&nbsp; Quality has increased immensely over the last 18 months.<br /><a target="_blank" href="http://www.dnrtv.com/">DNRTV</a> - Excellent series by Carl Franklin who brings us .NET Rocks.<br /><br />Tech people (amongst many others) I follow on Twitter:<br />@shanselman<br />@damienguard<br />@bradwilson<br />@ayende<br />@robconery<br />@scottgu<br />@damianedwards<br /><br />More to come...<br />

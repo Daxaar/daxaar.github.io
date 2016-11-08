@@ -1,10 +1,10 @@
 ---
 layout: post
 title: The state of Angular 2 Tooling
-excerpt: 
+excerpt:
 author: daxaar
 categories:
-  - NET
+  - .NET
   - Angular 2
 
 tags:

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Forget the Spec it’s the revenge of the Shiv
-excerpt: 
+excerpt: Embrace HTML5.  Having to support older browsers shouldn't be holding you back.
 author: daxaar
 categories:
   - General
@@ -14,12 +14,11 @@ draft: false
     </p>
 
 Are you about to embark on a new website (re)design?  <a href="http://net.tutsplus.com/tutorials/html-css-techniques/quick-tip-html5-features-you-should-be-using-right-now/">Do yourself a favour</a> and embrace HTML5. 
-</p>
 
 <blockquote>"But I need to support older browsers and this HTML5 stuff won't be getting a ratified spec until 2022.  That's no use for me!  <a href="http://www.ie6countdown.com/"><em>Damn you IE6!</em></a>"
-</p></blockquote>
+</blockquote>
 
-<p>This is a common misconception of HTML5 and whilst there are many features that are still <a href="http://html5labs.interoperabilitybridges.com/">experimental</a>, a lot are now <a href="http://caniuse.com/">fully supported</a> in all of the modern <strong>and older</strong> browsers.
+This is a common misconception of HTML5 and whilst there are many features that are still <a href="http://html5labs.interoperabilitybridges.com/">experimental</a>, a lot are now <a href="http://caniuse.com/">fully supported</a> in all of the modern <strong>and older</strong> browsers.
 
 When it comes to your markup, if you're still using the div tag for anything other than a styling placeholder you're doing it <em>wro…in a less than ideal way</em>.  HTML5 introduces a significant number of more semantic tags such as <strong>&lt;header&gt;, &lt;section&gt;, &lt;article&gt;</strong> and <strong>&lt;footer&gt;</strong> to name a few, but where you'll run into problems is in styling these tags or even getting them to display within old IE.
 

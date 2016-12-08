@@ -30,39 +30,50 @@ You can follow along by simply reading the explanatory text and executing the c
 
 First let's setup our folder structure.  The following command(s) will create the required folder structure under your home directory and navigate into it.
 
-[code lang=bash]
-mkdir ~/remotes-tutorial &amp;&amp; cd ~/remotes-tutorial
-mkdir r1 &amp;&amp; mkdir r2
-cd r1
-[/code]
+~~~ bash
+mkdir ~/remotes-tutorial && cd ~/remotes-tutorial
+mkdir r1 && mkdir r2
 
-Create a new git repo in the folder r1 folder you're now in
+~~~
 
-<code>git init --bare</code>
+Create a new git repo in the r1 folder you're now in
 
-Check the manpage for details on the --bare option.
+~~~
+git init --bare
+~~~
+
+Check the manpage for details on the `--bare` option.
 
 Change to the r2 directory
 
-[code lang=text]
-cd .. &amp;&amp; cd r2
-[/code]
+~~~
+cd && cd r2
+~~~
 
-Initialise another git repo here (notice we don't use --bare).
+Initialise another git repo here (notice we don't use `--bare`).
 
-<code>git init</code>
+~~~
+git init
+~~~
 
 You'll see that we have no remotes configured.
 
-<code>git remote</code>
+~~~
+git remote
+~~~
 
 Configure this repo to use r1 as a remote
 
-<code>git remote add origin ~/remotes-tutorial/r1</code>
+~~~
+git remote add origin ~/remotes-tutorial/r1
+~~~
+
 
 Let's check what this has done
 
-<code>git remote show origin</code>
+~~~
+git remote show origin
+~~~
 
 The output in the terminal will show we now have the r1 repository configured as a remote, but HEAD branch: (unknown) shows we have no tracking branches yet. That is, none of our local branches have been based off of a remote commit. This is a significant part of understanding tracking branches. A branch does not exist in git in the same way as it does in Mercurial, SVN or TFS etc. A branch is merely a named commit.
 
@@ -74,55 +85,69 @@ OK, this is going off on a tangent. Let's get back to where we were.
 
 So we have our remote setup but no tracking branches. That is to say our local master isn't tracking the remote master. Let's set that up now by pushing our local master branch to the remote.
 
-<code>git push origin master</code>
+~~~
+git push origin master
+~~~
 
 An error!
-<code>error: src refspec master does not match any</code>
+~~~
+error: src refspec master does not match any
+~~~
 
 Don't panic, any errors we see along the way are intentional. What this means is that git doesn't know what master is. Remember <strong>a branch is just a named commit</strong> and we haven't made any commits to our repo yet so somewhat unsurprisingly master doesn't exist. Let's prove this.
 
-<code>git branch</code>
+~~~
+git branch
+~~~
 
 You should see nothing coming back in the terminal because we don't have any branches yet or more specifically we don't have any commits.
 
 Let's make a quick commit.
 
-[code lang=bash]
+~~~ bash
 touch file
 git add .
 git commit -m &#039;initial commit&#039;
-[/code]
+~~~
 
 Now lets see what branches we have
 
-<code>git branch</code>
+~~~
+git branch
+~~~
 
 OK, we now have master. But why master? This name is simply the default name given to the branch when the first commit is made. If we'd wanted to we could have created a branch called wibble before making the first commit and master would never exist!
 
 OK, so now let's get back to pushing our master branch to the remote.
 
-<code>git push origin master</code>
+~~~
+git push origin master
+~~~
 
 Now let's see what our remote looks like in relation to our master branch
 
-<code>git remote show origin</code>
+~~~
+git remote show origin
+~~~
 
-[code lang=text]
+
+~~~ bash
 Fetch URL: /Users/darren/remotes-tutorial/r1
 Push URL: /Users/darren/remotes-tutorial/r1
 HEAD branch: master
 Remote branch:
 master tracked
-Local ref configured for &#039;git push&#039;:
+Local ref configured for git push:
 master pushes to master (up to date)
-[/code]
-
+~~~
 The key thing here is that our master is now tracking master in the remote repo. If we wanted to we could checkout the remote tracking branch. But remember, we're checking out our local copy of the remote (The D in DVCS) and again, this is just a named commit in the repository. No changes we make here will affect the actual remote repository.
 
-<code>git checkout origin/master</code>
+~~~
+git checkout origin/master
+~~~
 
-[code lang=text]
-You are in &#039;detached HEAD&#039; state. You can look around, make experimental
+~~~
+You are in detached HEAD state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
 state without impacting any branches by performing another checkout.
 
@@ -132,7 +157,7 @@ do so (now or later) by using -b with the checkout command again. Example:
 git checkout -b
 
 HEAD is now at e764596... initial commit
-[/code]
+~~~
 
 Detached HEAD? Sounds painful. The warning message is quite self explanatory but essentially from this we can see that we cannot make any changes to this branch but we can create a new branch using this as our starting point. A branch (and that includes the remote tracking branch origin/master) is simply a commit within the repository.
 
@@ -140,18 +165,22 @@ Let's go off piste a little here now. Remember, our local master is already trac
 
 Let's assume we want to make some changes...
 
-<code>git checkout origin/master -b new_feature</code>
+~~~
+git checkout origin/master -b new_feature
+~~~
 
-[code lang=text]
+~~~
 Branch new_feature set up to track remote branch master from origin.
 Switched to a new branch &#039;new_feature&#039;
-[/code]
+~~~
 
-This creates a new branch called <code>new_feature</code> which has been setup automatically to track origin/master. Let's look at how our remote is now configured
+This creates a new branch called `new_feature` which has been setup automatically to track origin/master. Let's look at how our remote is now configured
 
-<code>git remote show origin</code>
+~~~
+git remote show origin
+~~~
 
-[code lang=text]
+~~~
 Fetch URL: /Users/darren/remotes-tutorial/r1
 Push URL: /Users/darren/remotes-tutorial/r1
 HEAD branch: master
@@ -161,23 +190,25 @@ Local branch configured for &#039;git pull&#039;:
 new_feature merges with remote master
 Local ref configured for &#039;git push&#039;:
 master pushes to master (up to date)
-[/code]
+~~~
 
 As you can see our new_feature branch is tracking origin/master when we pull but significantly it isn't configured to allow us to push to origin/master. Only one local branch (ref in the message above) can be configured to push which makes sense.
 
-This now means that whenever we do a <code>git pull origin master</code> it will be merged automatically into <strong>both</strong> the master and new_feature branches. Typically this isn't something you'd want to do, especially on master. However, this shows there isn't a linear one to one relationship between a remote branch and a local branch. As I've eluded to a few times in this post already, a branch is nothing more than a named commit within the repository.
+This now means that whenever we do a `git pull origin master` it will be merged automatically into <strong>both</strong> the master and new_feature branches. Typically this isn't something you'd want to do, especially on master. However, this shows there isn't a linear one to one relationship between a remote branch and a local branch. As I've eluded to a few times in this post already, a branch is nothing more than a named commit within the repository.
 
 Let's make a change on new_feature and push to the remote to see what happens. Remember, we have to make the commit because, repeat after me..."A branch is just a named commit" and without any commits on new_feature it doesn't really exist (other than in the reflog but we'll cover that little gem in another post).
 
-[code lang=text]
+~~~ bash
 touch fileonnew_feature
 git add .
-git commit -m &#039;added new file&#039;
-[/code]
+git commit -m "added new file"
+~~~
 
-<code>git push origin new_feature</code>
+~~~
+git push origin new_feature
+~~~
 
-[code lang=text]
+~~~
 Fetch URL: /Users/darren/remotes-tutorial/r1
 Push URL: /Users/darren/remotes-tutorial/r1
 HEAD branch: master
@@ -189,17 +220,21 @@ new_feature merges with remote master
 Local refs configured for &#039;git push&#039;:
 master pushes to master (up to date)
 new_feature pushes to new_feature (up to date)
-[/code]
+~~~
 
 OK we can see that new_feature now exists in the remote and we're tracking it. However, notice that new_feature is configured to merge from remote master when we do a git pull. This is because if you remember we based new_feature off of origin/master. Although there is nothing wrong with doing this it's not what we want so let's see how we can change this behaviour so new_feature tracks changes to remote new_feature when we pull.
 
-<code>git branch new_feature --set-upstream-to origin/new_feature</code>
+~~~
+git branch new_feature --set-upstream-to origin/new_feature
+~~~
 
 Ok now let's look at how our remotes are setup
 
-<code>git remote show origin</code>
+~~~
+git remote show origin
+~~~
 
-[code lang=text]
+~~~
 * remote origin
 Fetch URL: /Users/darren/remotes-tutorial/r1
 Push URL: /Users/darren/remotes-tutorial/r1
@@ -212,7 +247,7 @@ new_feature merges with remote new_feature
 Local refs configured for &#039;git push&#039;:
 master pushes to master (up to date)
 new_feature pushes to new_feature (up to date)
-[/code]
+~~~
 
 Excellent, we have new_feature tracking origin/new_feature for push and pull.
 

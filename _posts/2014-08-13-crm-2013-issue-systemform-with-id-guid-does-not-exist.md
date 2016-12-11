@@ -1,7 +1,7 @@
 ---
 layout: post
 title: systemform With Id = {guid} Does Not Exist
-excerpt: 
+excerpt:
 author: daxaar
 categories:
   - Dynamics Crm
@@ -26,6 +26,10 @@ So:
 <li><p>For each <em>&lt;Entity&gt;</em> that uses the Quick Form you'll see it contains a <em>&lt;QuickFormIds&gt;</em> element similar to that shown below.  You need to make sure that the <em>&lt;Entity&gt;</em> element for the entity it refers to (xyz_entityName in this case) appears in the file BEFORE the <em>&lt;Entity&gt;</em> that is referencing it via the QuickFormIds element.</p></li>
 </ol>
 
-<blockquote>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="xyz_entityName"&gt;33d82ce4-0648-477c-a1b8-08ddd4b6e5be&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</blockquote>
+~~~ xml
+<QuickFormIds>
+  <QuickFormId entityname="xyz_entityName">33d82ce4-0648-477c-a1b8-08ddd4b6e5be</QuickFormId>
+</QuickFormIds>
+~~~
 
 <p>Looks like a bug that will hopefully get sorted in the next rollup.

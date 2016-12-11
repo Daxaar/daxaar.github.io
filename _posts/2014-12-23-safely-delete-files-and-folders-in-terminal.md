@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Safely delete files and folders in terminal
-excerpt: 
+excerpt:
 author: daxaar
 categories:
   - Bash Terminal
@@ -17,4 +17,4 @@ There are many on the forums who believe the power of rm is a good thing as it m
 
 So, easiest way to get it is with homebrew:
 
-<code>brew install trash</code>
+`brew install trash`

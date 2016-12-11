@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configuring visual diff and merge tools for git on Windows
-excerpt: 
+excerpt:
 author: daxaar
 categories:
   - GIT
@@ -14,17 +14,18 @@ There's plenty of information available on the net for configuring your visual d
 
 Add the following to your .gitconfig. If you don't know what that is <a href="http://git-scm.com/book/en/Customizing-Git-Git-Configuration">go here</a>.
 
-<span style="font-family:Courier New;">[diff]
-</span><span style="font-family:Courier New;">   external = C:&#092;Program Files&#092;Perforce&#092;p4merge.exe
-</span><span style="font-family:Courier New;">    tool = p4merge
-</span><span style="font-family:Courier New;">[difftool "p4merge"]
-</span><span style="font-family:Courier New;">    cmd = p4merge.exe $LOCAL $REMOTE
-</span><span style="font-family:Courier New;">[difftool]
-</span><span style="font-family:Courier New;">    prompt = false
-</span><span style="font-family:Courier New;">[merge]
-</span><span style="font-family:Courier New;">    tool = p4merge
-</span><span style="font-family:Courier New;">[mergetool "p4merge"]
-</span><span style="font-family:Courier New;">    cmd = p4merge.exe $BASE $LOCAL $REMOTE $MERGED
-</span>
+~~~
+[diff]
+   external = C:\Program Files\Perforce\p4merge.exe
+    tool = p4merge
+[difftool "p4merge"]
+    cmd = p4merge.exe $LOCAL $REMOTE
+[difftool]
+    prompt = false
+[merge]
+    tool = p4merge
+[mergetool "p4merge"]
+    cmd = p4merge.exe $BASE $LOCAL $REMOTE $MERGED
+~~~
 
 I'm using p4merge by <a href="http://perforce.com/product/components/perforce-visual-merge-and-diff-tools">Perforce</a>. It's free and supports the git three way merge well. If you want to use any other tool of choice add it to your path and replace the references to the .exe accordingly.

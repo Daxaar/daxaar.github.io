@@ -69,7 +69,7 @@ The new folder structure will now look as follows including our new <code>index.
         index.ts
 ~~~
 
-<code>index.ts</code> will contain the following:
+`index.ts` will contain the following:
 
 ~~~ javascript
 export { ContactComponent } from './contact.component';

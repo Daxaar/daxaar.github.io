@@ -34,6 +34,7 @@
 <div id="index">
   <h3><a href="{{ site.url}}/posts/">Recent Posts</a></h3>
   {% for post in site.posts limit:site.front_page.posts_limit %}
+  {%unless post.draft %}
   <article>
     {% if post.link %}
       <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h2>
@@ -42,6 +43,7 @@
       <p>{{ post.excerpt | strip_html | truncate: 260 }}</p>
     {% endif %}
   </article>
+  {% endunless %}
   {% endfor %}
 </div><!-- /#index -->
 

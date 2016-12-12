@@ -16,9 +16,9 @@ My Jekyll installation recently stopped working with following error when I trie
 
 ~~~ text
 WARN: Unresolved specs during Gem::Specification.reset:
-redcarpet ( &gt; 3.1)
-jekyll-watch ( &gt; 1.1)
-classifier-reborn ( &gt; 2.0)
+redcarpet ( > 3.1)
+jekyll-watch ( > 1.1)
+classifier-reborn ( > 2.0)
 WARN: Clearing out unresolved specs.
 ~~~
 

@@ -37,7 +37,10 @@ We now need to edit the Samba configuration file but let's create a backup first
 sudo cp /etc/samba/smb.conf ~
 ~~~
 
-Open up the `/etc/samba/smb.conf` file in your editor of choice (vim, nano, leafpad) `sudo vim /etc/samba/smb.conf`.
+Open up the `/etc/samba/smb.conf` file in your editor of choice (vim, nano, leafpad) 
+~~~ bash
+sudo vim /etc/samba/smb.conf
+~~~
 
 Before we start bear in mind that whitespace matters in this file so make sure you include the spaces before and after the =.
 

@@ -41,34 +41,37 @@ Step 1: You're going to need the associated .cue file but you may only have the 
 you can try creating a cue file with the content below (make sure you change the FILENAME placeholder).  Save this
 file alongside your .bin file with the same name i.e `my-file.cue` and `my-file.bin`.
 
-~~~
+{% highlight bash %}
 FILE "FILENAME.bin" BINARY
   TRACK 01 MODE1/2352
     INDEX 01 00:00:00
-~~~
+{% endhighlight %}
 
 Step 2: Install bchunk
-~~~
+{% highlight bash %}
 sudo apt-get install bchunk
-~~~
+{% endhighlight %}
 
 Step 3: Convert the .bin to .iso.  Make sure you get the arguments in the correct order.
-~~~
+
+{% highlight bash %}
 bchunk ~/your-file.bin ~/your-file.cue ~/your-file.iso
-~~~
+{% endhighlight %}
 
 Step 4: Create a mount point and mount the iso image.
-~~~
+
+{% highlight bash %}
 sudo mkdir /mnt/iso
 sudo mount -o loop ~/your-file.iso /mnt/iso
-~~~
+{% endhighlight %}
 
 Step 5: Browse the content of your original bin.
-~~~
-ls /mnt/iso
-~~~
 
+{% highlight bash %}
+ls /mnt/iso
+{% endhighlight %}
 Step 6: Once you've finished with the iso just unmount it
-~~~
+
+{% highlight bash %}
 sudo umount /mnt/iso
-~~~
+{% endhighlight %}

@@ -48,27 +48,27 @@ FILE "FILENAME.bin" BINARY
 ~~~
 
 Step 2: Install bchunk
-~~~ bash
+~~~
 sudo apt-get install bchunk
 ~~~
 
 Step 3: Convert the .bin to .iso.  Make sure you get the arguments in the correct order.
-~~~ bash
+~~~
 bchunk ~/your-file.bin ~/your-file.cue ~/your-file.iso
 ~~~
 
 Step 4: Create a mount point and mount the iso image.
-~~~ bash
+~~~
 sudo mkdir /mnt/iso
 sudo mount -o loop ~/your-file.iso /mnt/iso
 ~~~
 
 Step 5: Browse the content of your original bin.
-~~~bash
+~~~
 ls /mnt/iso
 ~~~
 
 Step 6: Once you've finished with the iso just unmount it
-~~~bash
+~~~
 sudo umount /mnt/iso
 ~~~

@@ -30,7 +30,7 @@ You can follow along by simply reading the explanatory text and executing the c
 
 First let's setup our folder structure.  The following command(s) will create the required folder structure under your home directory and navigate into it.
 
-~~~ bash
+~~~
 mkdir ~/remotes-tutorial && cd ~/remotes-tutorial
 mkdir r1 && mkdir r2
 
@@ -104,7 +104,7 @@ You should see nothing coming back in the terminal because we don't have any bra
 
 Let's make a quick commit.
 
-~~~ bash
+~~~
 touch file
 git add .
 git commit -m &#039;initial commit&#039;
@@ -131,7 +131,7 @@ git remote show origin
 ~~~
 
 
-~~~ bash
+~~~
 Fetch URL: /Users/darren/remotes-tutorial/r1
 Push URL: /Users/darren/remotes-tutorial/r1
 HEAD branch: master
@@ -198,7 +198,7 @@ This now means that whenever we do a `git pull origin master` it will be merged 
 
 Let's make a change on new_feature and push to the remote to see what happens. Remember, we have to make the commit because, repeat after me..."A branch is just a named commit" and without any commits on new_feature it doesn't really exist (other than in the reflog but we'll cover that little gem in another post).
 
-~~~ bash
+~~~
 touch fileonnew_feature
 git add .
 git commit -m "added new file"

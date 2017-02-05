@@ -17,19 +17,19 @@ If you don't have homebrew installed consider <a href="http://brew.sh/">doing so
 
 Install `ssh-copy-id` which allows us to upload the public key to the remote more easily.
 
-~~~ bash
+~~~
 brew install ssh-copy-id
 ~~~
 
 Create the public and private key pair file locally providing an optional password. This will get stored under ~/.ssh. Specifying a filename is optional.
 
-~~~ bash
+~~~
 ssh-keygen
 ~~~
 
 Now we need to put the public key on the remote server. The tool we installed in step 1 will allow us to easily do this.
 
-~~~ bash
+~~~
 ssh-copy-id user@serverip-or-name
 ~~~
 
